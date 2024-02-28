@@ -21,12 +21,21 @@ body {
     max-width: 800px;
     width: 100%;
     margin: 2rem;
-    padding: 1.5rem;
+    padding: 2rem;
     background-color: white;
     border-radius: 1rem;
 }
 
-.image .comida{
+.container .image{
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.container .image img{
+    border-radius: 1rem;
+}
+
+img {
     max-width: 100%;
     display: block;
 }
@@ -46,16 +55,86 @@ h2{
     margin-bottom: 1rem;
 }
 
+.description{
+    padding: 2rem 0rem 2rem 0rem;
+}
+
+.description p {
+    margin: 1.25rem 0;
+}
+
+.recipe-time{
+    background-color: hsl(330, 100%, 98%);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.recipe-time h3 {
+    color: hsl(332, 51%, 32%);
+    margin-bottom: .75rem;
+}
+
+.recipe-time ul li::marker{
+    color: hsl(332, 51%, 32%);
+}
+
+.ingredients li {
+    margin-bottom: .5rem;
+}
+
+.ingredients li span{
+    font-weight: initial;
+}
+
+.properList{
+    padding-left: 1rem;
+}
+
+ol li::marker {
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+
+.properList li{
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.properList span{
+    font-weight: 700;
+}
+
 .recipe-step{
     margin-top: 1rem 0;
 }
 
-.nutrition-step{
-    margin-top: 1rem;
+.nutrition .values{
+    margin-bottom: 1rem;
+}
+
+.nutrition-table .item{
+    padding: .75rem 2rem;
+    display: flex;
+    border-bottom: 1px solid hsl(30, 18%, 87%);
+}
+
+.nutrition-table .item:last-child{
+    border-bottom: 0;
+}
+
+.nutrition-table .item p:nth-child(2){
+    color: hsl(14, 45%, 36%);
+    font-weight: 700;
+}
+
+.nutrition-table .item > *{
+    width: 100px;
+    margin-right: auto;
 }
 
 ul{
-    padding-left: 1.25rem;
+    padding-left: 1.5rem;
 }
 
 ul li::marker{
@@ -76,4 +155,23 @@ ul li span{
 hr{
     margin: 1.5rem 0;
     border: 1px solid hsl(30, 18%, 87%);
+}
+
+@media (max-width: 540px){
+    h1 {
+        margin-top: 2rem;
+    }
+
+    .container{
+        margin: 0;
+    }
+
+    .container .image{
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .container .image img{
+        border-radius: 0;
+    }
 }
